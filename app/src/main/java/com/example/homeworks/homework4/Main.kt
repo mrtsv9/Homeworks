@@ -16,7 +16,7 @@ class Main : AppCompatActivity() {
         setContentView(R.layout.activity_main4)
         val persons = PersonFactory().createPersons()
         PersonFactory().showInfo(persons)
-
+        //2
     }
 
 }
