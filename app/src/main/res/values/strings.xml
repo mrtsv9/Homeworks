@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidHomeworks</string>
+    <string name="click">Click</string>
+    <string name="login">Введите логин</string>
+    <string name="password">Введите пароль</string>
+    <string name="enter">Войти</string>
 </resources>

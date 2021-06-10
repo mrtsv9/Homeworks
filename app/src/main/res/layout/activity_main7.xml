@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+    <TextView
+        android:id="@+id/justTimer"
+        android:layout_width="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="300dp"
+        android:background="@android:color/holo_blue_light"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_height="50dp"/>
+
+    <EditText
+        android:id="@+id/login"
+        android:layout_marginTop="300dp"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:background="@color/teal_700"
+        android:text="@string/login"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:background="@color/teal_700"
+        android:layout_marginTop="20dp"
+        android:text="@string/password"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+    <Button
+        android:id="@+id/justButton"
+        android:layout_width="160dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="@string/click"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+</LinearLayout>
