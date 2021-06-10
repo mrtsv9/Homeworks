@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import com.example.homeworks.R
 
-class Main : AppCompatActivity() {
+class Homework3Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)

@@ -4,4 +4,9 @@
     <string name="login">Введите логин</string>
     <string name="password">Введите пароль</string>
     <string name="enter">Войти</string>
+    <string name="homework_2">Homework 2</string>
+    <string name="homework_3">Homework 3</string>
+    <string name="homework_4">Homework 4</string>
+    <string name="homework_6">Homework 6</string>
+    <string name="homework_7">Homework 7</string>
 </resources>

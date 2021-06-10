@@ -9,22 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidHomeworks">
-        <activity android:name=".homework7.SecondActivity"></activity>
-        <activity android:name=".homework7.Main">
+        <activity android:name=".all_homeworks.AllHomeworksActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".homework6.Main">
+        <activity android:name=".homework7.SecondActivity" />
+        <activity android:name=".homework7.Homework7Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".homework4.Main">
+        <activity android:name=".homework6.Homework6Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".homework4.Homework4Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

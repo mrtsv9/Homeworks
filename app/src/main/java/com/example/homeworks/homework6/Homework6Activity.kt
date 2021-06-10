@@ -1,14 +1,13 @@
-package homework2
+package com.example.homeworks.homework6
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.example.homeworks.R
 
-class MainActivity : AppCompatActivity() {
+class Homework6Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        Log.e("Kek", Singleton.createAutomobiles().toString())
+        setContentView(R.layout.activity_main6)
+
     }
 }

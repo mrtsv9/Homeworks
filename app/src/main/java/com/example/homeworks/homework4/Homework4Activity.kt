@@ -9,7 +9,7 @@ import homework4.Employee
 import homework4.Manager
 import homework4.Worker
 
-class Main : AppCompatActivity() {
+class Homework4Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
