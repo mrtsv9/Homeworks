@@ -3,17 +3,13 @@ package com.example.homeworks.homework7
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
-import android.widget.Button
-import android.widget.TextView
-import com.example.homeworks.R
 import com.example.homeworks.databinding.ActivityMain7Binding
 
 class Homework7Activity : AppCompatActivity(), View.OnClickListener {
     companion object {
         private var timer: Int = 10
-        private var checker: Boolean = false
+        private var checker: Boolean = false // Для проверки, пока таймер не 0
         private const val COUNTER_KEY = "COUNTER_KEY"
     }
 
@@ -44,16 +40,47 @@ class Homework7Activity : AppCompatActivity(), View.OnClickListener {
         else if (timer == 0 && checker) {
             val justButton = binding.justButton
             justTimer.visibility  = View.GONE
-            login.visibility  = View.VISIBLE
-            password.visibility  = View.VISIBLE
+            binding.loginLayout.visibility  = View.VISIBLE
+            binding.passwordLayout.visibility  = View.VISIBLE
             justButton.text = "Войти"
             checker = false
         }
         else {
+            if (!validateLogin() or !validatePassword()) {
+                return
+            }
             val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra(SecondActivity.LOGIN, login.text.toString())
             intent.putExtra(SecondActivity.PASSWORD, password.text.toString())
             startActivity(intent)
+        }
+    }
+
+    private fun validateLogin(): Boolean {
+        val emailInput = binding.login.text.toString().trim()
+        if (emailInput.isEmpty()) {
+            binding.loginLayout.error = "Field cant be empty"
+            return false
+        }
+        if (emailInput.length > 20) {
+            binding.loginLayout.error = "Its too long"
+            return false
+        }
+        else {
+            binding.loginLayout.error = null
+            return true
+        }
+    }
+
+    private fun validatePassword(): Boolean {
+        val passwordInput = binding.password.text.toString().trim()
+        if (passwordInput.isEmpty()) {
+            binding.passwordLayout.error = "Field cant be empty"
+            return false
+        }
+        else {
+            binding.passwordLayout.error = null
+            return true
         }
     }
 

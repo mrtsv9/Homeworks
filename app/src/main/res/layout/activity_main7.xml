@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_gravity="center">
     <TextView
@@ -16,31 +16,52 @@
         android:gravity="center"
         android:visibility="visible" />
 
-    <EditText
-        android:id="@+id/login"
-        android:layout_marginTop="300dp"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:background="@color/teal_700"
-        android:text="@string/login"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:gravity="center"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:visibility="gone"
-        />
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:background="@color/teal_700"
-        android:layout_marginTop="20dp"
-        android:text="@string/password"
-        android:textStyle="bold"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
         android:layout_gravity="center"
-        android:gravity="center"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:background="#72F1F1"
+            android:hint="@string/login"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="wrap_content"
         android:visibility="gone"
-        />
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_gravity="center"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#72F1F1"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
+        style="?attr/materialButtonOutlinedStyle"
         android:id="@+id/justButton"
         android:layout_width="160dp"
         android:layout_height="85dp"
