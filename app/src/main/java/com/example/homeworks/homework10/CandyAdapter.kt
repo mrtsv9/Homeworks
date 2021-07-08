@@ -45,7 +45,7 @@ class CandyAdapter(
         candyList.apply {
             clear()
             addAll(List)
+            notifyDataSetChanged()
         }
-        notifyDataSetChanged()
     }
 }
