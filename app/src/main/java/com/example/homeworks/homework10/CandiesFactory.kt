@@ -12,7 +12,7 @@ object CandiesFactory {
         "kitkat" to
                 "https://main-cdn.goods.ru/big1/hlr-system/-1/22/35/76/16/25/19/100024250617b0.jpeg")
 
-    private fun generateBarcode(from: Int = 10000000, to: Int = 99999999): String =
+    fun generateBarcode(from: Int = 10000000, to: Int = 99999999): String =
         Random.nextInt(from, to).toString()
 
     fun generateCandies(size: Int = 300) : ArrayList<CandyItem> {

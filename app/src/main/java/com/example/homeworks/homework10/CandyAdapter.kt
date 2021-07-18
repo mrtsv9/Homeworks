@@ -1,6 +1,5 @@
 package com.example.homeworks.homework10
 
-import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +16,9 @@ class CandyAdapter(
     override fun getItemCount(): Int = candyList.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CandyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.rv_item, parent, false)
+        val view = LayoutInflater
+            .from(parent.context)
+            .inflate(R.layout.activity_rv_item, parent, false)
         return CandyViewHolder(view)
     }
 
